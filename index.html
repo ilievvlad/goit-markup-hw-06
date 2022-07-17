@@ -366,7 +366,7 @@
 					</ul>
 				</div>
 				<div class="footer__social">
-					<h2 class="footer__title">Присоединяйтесь</h2>
+					<b class="footer__title">Присоединяйтесь</b>
 					<ul class="social">
 						<li class="social-item">
 							<a href="#" class="social-link social-link_bg" aria-label="Instagram" target="_blank"
@@ -403,7 +403,7 @@
 					</ul>
 				</div>
 				<div class="footer__subscribe subscribe-footer">
-					<h2 class="footer__title">Подпишитесь на рассылку</h2>
+					<b class="footer__title">Подпишитесь на рассылку</b>
 					<form name="subscribe" autocomplete="off" class="subscribe-footer__form">
 						<input type="email" name="email" class="subscribe-footer__input" placeholder="E-mail">
 						<button type="submit" class="subscribe-footer__btn">
@@ -449,11 +449,14 @@
 						</label>
 						<label class="modal__label">
 							<span class="modal__label-text">Комментарий</span>
-							<textarea name="comment" placeholder="Введите текст" class="modal__input modal__input-message">
-							</textarea>
+							<textarea name="comment" placeholder="Введите текст"
+								class="modal__input modal__input-message"></textarea>
 						</label>
 						<label class="modal__label-check">
 							<input type="checkbox" name="check" value="terms" class="modal__input-check">
+							<svg class="modal__icon-check" width="11" height="8">
+								<use href="./images/icons.svg#modal-check"></use>
+							</svg>
 							<span class="modal__terms">
 								Соглашаюсь с рассылкой и принимаю
 								<a href="#" class="modal__terms-link">Условия договора</a>

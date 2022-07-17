@@ -193,6 +193,7 @@
 	margin-bottom: 9px;
 }
 .footer__title {
+	display: block;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: var(--light-color);
@@ -611,10 +612,6 @@
 	letter-spacing: .01em;
 	color: rgba(117, 117, 117, 0.5);
 }
-.modal__check {
-	width: 16px;
-	height: 15px;
-}
 .modal__icon {
 	position: absolute;
 	top: 50%;
@@ -627,6 +624,7 @@
 .modal__label:focus-within .modal__icon {
 	fill: var(--front-color);
 }
+
 .modal__label-check {
 	display: flex;
 	align-items: center;
@@ -634,11 +632,18 @@
 	margin: 20px 0 30px 0;
 }
 .modal__input-check {
-	width: 16px;
-	height: 15px;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
 }
-.modal__input-check:checked {
-	background-color: var(--front-color);
+.modal__icon-check {
+	fill: var(--light-color);
+	width: 16px;
+	height: 16px;
+	border: 2px solid var(--main-color);
+	border-radius: 4px;
+	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+					background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__terms {
 	line-height: 1.7;
@@ -648,6 +653,11 @@
 	color: var(--front-color);
 	text-decoration: underline !important;
 }
+.modal__input-check:checked + .modal__icon-check {
+	background-color: var(--front-color);
+	border-color: transparent;
+}
+
 .modal__btn {
 	display: block;
 	margin: 0 auto;
